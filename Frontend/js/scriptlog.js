@@ -7,6 +7,39 @@ $(document).ready(function(){
      withCredentials: true
  }
     });
+    $("#login-btn").on('click', function (e) {
+   
+        e.preventDefault();
+        console.log("hello");
+        console.log("username");
+         let user = {
+             username: $("#username").val(),
+             password: $("#pass").val(),
+             
+             
+         };
+         $.ajax({
+             type: 'POST',
+             url: 'http://localhost:3000/users/login',
+             data: user,
+     
+             success: function (user) {
+                 if(user.publisher == true){
+                 alert("welcome publisher,you are login in");
+                 window.location.href = 'post.html';  
+                
+             }
+             
+             else  {
+                 alert("welcome seeker, you are logged in");
+     window.location.href = 'Home.html'; 
+             }
+             },
+             error: function () {
+                 alert("either username or password is incorrect");
+             }
+         });
+     });
     $("#Register-seekerbtn").on('click', function (e) {
 
         e.preventDefault();
