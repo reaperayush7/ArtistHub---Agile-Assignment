@@ -1,0 +1,1060 @@
+<html lang="en">
+<head>
+  <title>
+ArtistHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+   <!-- Custom styles for this template -->
+    <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+ <link rel="icon" href="resources/Bootstrap/Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
+<!--Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ <!-- yo chai text transformation ko  lagi  -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ 
+  }
+ </style>
+</head>
+<body>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+    
+      <div class="container">
+
+        <a class="navbar-brand js-scroll-trigger" href="index.html"><div style="height:60px;width:85px" class="ml-auto">
+        	<img src="images/logo.png" style="height:60px;width:200px"><!-- <h3>RuAin </h3> --> </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        	<!-- this is for the search -->
+        	<form class="form-inline">
+   
+  </form>
+
+  <!-- this is for the search -->
+          <ul class="navbar-nav ml-auto">
+
+          	<li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="${pageContext.request.contextPath}/#howitwrks"><h5>How it works ? </h5> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalLRForm" href="#login"><h5>Login </h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" data-toggle="modal" data-target="#modalPush" href="#signup"><h5>SignUp </h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="#contactlinjmp"><h5>Contact </h5></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      </div>
+    </nav>
+    <!-- pb means here p means padding and b means botton after text or written the paaddng is set 0 -->
+
+
+<div class="container-fluid mt-5 pt-2 unique-color-dark">
+	<ul class="nav">
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="#"><Strong>Customer Service </Strong></a>
+  </li>
+ 
+
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="contact.html"><strong>Inquiries </strong></a>
+  </li>
+  <li class="nav-item ml-2">
+   <!--  <a class="nav-link text-white" href="redirectotadmin"> <strong> Admin</strong></a> -->
+      <a class="nav-link text-white" data-toggle="modal" data-target="#modalloginformvv"> <strong> Admin</strong></a>
+    
+  </li>
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="location.html"><strong> Direction </strong></a>
+  </li>
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="about us.html"> <strong>About Us </strong></a>
+  </li>
+  <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="#"><strong> FAQ </strong></a>
+  </li>
+   <li class="nav-item ml-2">
+    <a class="nav-link text-white" href="JobSeekerManual-JobPortal-converted.pdf"><strong>Help </strong></a>
+  </li>
+  
+
+ 
+</ul>
+
+</div>
+<hr>
+
+
+<div class="modal fade" id="modalloginformvv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="getloginforadmin" method="POST">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Admin Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fa fa-user prefix grey-text"></i>
+                     <label data-error="wrong" data-success="right" for="form34">Username </label> <br>
+                    <input type="text" id="form34" class="form-control validate" name="username">
+                   
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form29">Password: </label> <br>
+                    <input type="Password" id="form29" class="form-control validate" name="password">
+                    
+                </div>
+
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-unique">Login <i class="fa fa-paper-plane-o ml-1"></i></button>
+            </div>
+
+        </div>
+    </form>
+    </div>
+</div>
+
+
+
+<div class="jumbotron stylish-color-dark">
+   <div class="container text-center text-white">
+        <div class="row">
+          <div class="col-sm-6 ">
+             <h2>Promoting best talent across Nepal </h2>
+        <p class="lead">The Artist Hub is for actors seeking <br>
+          talent agent representation.
+        </p>
+         <div class="col-sm-12">
+          <!-- <input type="text" class="form-control form-control-lg placeholder="What do you want ?"> -->
+          <div class = "input-group">
+               <input type = "text" class = "form-control form-control-sm">
+               
+               <span class = "input-group-btn">
+                  <button class = "btn btn-info btn-lg ml-2 " type = "button">
+                    <h6> Get Started ! </h6>
+                  </button>
+               </span>
+               
+            </div><!-- /input-group -->
+        </div>
+      </div>
+      <div class="col-sm-6">
+      	<div class="container">
+      		<!-- <Strong ><h2> Nepal No.1 Job Search Platform. </h2></Strong> -->
+      		<h1 class="ml1">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters"><strong>Helping unsigned actor get signed </strong></span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+<!-- text eddect ko lagi -->
+ <style>
+   .col-sm-3{
+     background-color:dimgray;
+   }
+   
+ body{
+   background-color:darkgray;
+ 
+  } 
+.ml1 {
+  font-weight: 900;
+  font-size: 3em;
+  color: white;
+}
+
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+</style>
+<script type="text/javascript">
+	
+
+	// Wrap every letter in a span
+$('.ml1 .letters').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 1000,
+    delay: function(el, i) {
+      return 70 * (i+1)
+    }
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 1000,
+    offset: '-=875',
+    delay: function(el, i, l) {
+      return 80 * (l - i);
+    }
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+      	</div>
+      </div>
+      </div>         
+  </div>
+ </div>
+  <div class="container-fluid bg-dark">
+
+</div>
+<hr>
+
+
+<!-- yo ta tyoy hire wala -->
+<style>
+#testdiv {
+   border-left: 3px solid;
+  /* border-color: green;*/
+  
+}
+</style>
+<div class="container ml-auto" style="height:auto">
+<div class="row ml-4">
+
+  <div class="col-sm-3 text-center">
+<h4 class="text-left"> <strong>Hire for any scope </strong></h4>
+  </div><div class="col-sm-3 text-center" id="testdiv">
+<h5> <b><strong>Short-term tasks  </strong></b></h5>
+Build a pool of diverse <br>experts  for one-off tasks
+  </div>
+  <div class="col-sm-3 text-center" id="testdiv">
+  	<h5> <b><strong>Recurring projects </strong></b></h5>
+Have a go-to team with the specialized skills individual.
+
+
+  </div>
+  <div class="col-sm-3 text-center" id="testdiv">
+  	  	<h5> <b><strong>Full-time contract work</strong></b></h5>
+Expand your staff with a dedicated team and the support properly.
+ 
+  </div>
+</div>
+
+</div>
+<!-- yo chai kk   garna milxa ra k ko lagi  ho -->
+<div class="container mt-5" id="trndjbs">
+  <!-- <h3 class="text-center"> Some of our most in-demand pros</h3> -->
+   <h2 class="text-center pl-4"><B>Some of our most in-demand pros </B></h2> <hr>
+  <div class="row mt-5 rgba-white-strong">
+    <div class="col-sm-3 ml-auto">
+
+   <!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="12.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Show your Talents</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+
+    </div>
+     <div class="col-sm-3">
+
+
+
+   <!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="11.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Search your true Potentials</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+
+
+    </div>
+     <div class="col-sm-3 ml-auto">
+
+   <!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="10.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Explore Integrity</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+     <div class="col-sm-3 ml-auto">
+ <!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="9.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Visualize</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+     <div class="col-sm-3 mt-3">
+<!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="8.png" alt="Find" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Dream Big</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+      <div class="col-sm-3 mt-3">
+<!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="7.png" alt="adminstrator" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Start off your career</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+    
+    <div class="col-sm-3 mt-3">
+<!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="6.png" alt="Technician" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Build up your potential</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+
+
+  
+    <div class="col-sm-3 mt-3">
+<!-- Card -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap"> -->
+ 
+        <img src="5.png" alt="Mark & advert" class="mx-auto d-block d-block" style="max-height:100px">
+    
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <!-- Title -->
+    <h5 class="card-title text-center">Start off your Future</h5>
+    <hr>
+
+
+  </div>
+
+
+</div>
+<!-- Card -->
+
+    </div>
+  </div>
+
+  </div>
+<!-- yo how  it works ko lagi ho -->
+
+<div class="jumbotron mt-4">
+
+
+ <div class="container" id="howitwrks">
+ <h1 class="text-center pl-auto display-5"><B>Upgrade your Potential </B></h1>
+ <div class="row mt-5">
+
+  <div class="col-sm-3">
+ 
+  <!--Card Regular-->
+        <div class="card card-cascade">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+    
+                       <!--  <img src="${pageContext.request.contextPath}/resources/Pics/findsv.svg" alt="Find" class="mx-auto d-block d-block" style="max-height:120px"> -->
+                       <img src="1.png" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
+                       <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center">
+                <!--Title-->
+                <h4 class="card-title"><strong>Search</strong></h4>
+                <!-- <h5>Web developer</h5> -->
+                <p class="card-text">Search artist according to your need.
+                </p>
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card Regular-->
+
+</div>
+  <div class="col-sm-3 text-center">
+<!--Card Regular-->
+        <div class="card card-cascade">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
+                <!-- <img src="../Pics/findsv.svg" alt="Find" class="card-img-center"> -->
+                  <img src="2.png" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
+
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center">
+                <!--Title-->
+                <h4 class="card-title"><strong>Post ADs</strong></h4>
+                <!-- <h5>Web developer</h5> -->
+
+                <p class="card-text">Post Ads by your Requirnnement
+                	& &nbsp; get the best outcomes .
+                </p>
+
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card Regular-->
+  </div>
+  <div class="col-sm-3">
+<!--Card Regular-->
+        <div class="card card-cascade">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
+              
+                  <img src="3.png" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center">
+                <!--Title-->
+                <h4 class="card-title"><strong>Apply</strong></h4>
+                <!-- <h5>Web developer</h5> -->
+
+                <p class="card-text">Use the Artisthub platform to find <br>
+the suitable jobs and apply for  it.
+                </p>
+
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card Regular-->
+  </div>
+  <div class="col-sm-3"> 
+   <!--Card Regular-->
+        <div class="card card-cascade">
+
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+                <!-- <img src="https://mdbootstrap.com/img/Photos/Others/men.jpg" class="card-img-top" alt="normal"> -->
+                <img src="4.png" alt="Find" class="mx-auto d-block d-block" style="max-height:120px">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center">
+                <!--Title-->
+                <h4 class="card-title"><strong>Feedback</strong></h4>
+                <!-- <h5>Web developer</h5> -->
+
+                <p class="card-text">Give the Feedback and experience views of the artist job
+                </p>
+
+
+            </div>
+            <!--/.Card content-->
+
+        </div>
+        <!--/.Card Regular-->
+  </div>
+ </div>
+</div>
+</div>
+
+<!-- this is  for the  footer -->
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Footer links -->
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">ArtistHub: <small>Get Signed </small></h6>
+          <p>The Artist Hub is here to level the playing field of talented actors trying to get representation. We recognize the sheer volume of submissions agents recieve, making it very hard 
+            for talented actors to stand out. So, we provide agents a streamlined process for managing applications, ensuring the artist receives fair consideration.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">System Users</h6> 
+          <p>
+            <a href="#!">Event Organizer</a>
+          </p>
+          <p>
+            <a href="#!">Artist</a>
+          </p>
+          <p>
+            <a href="#!">Admin</a>
+          </p>
+          <p>
+            <a href="#!">Site Visitor</a>
+          </p>
+        
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Useful Attributes</h6>
+          <p>
+            <a href="#!">Scopes</a>
+          </p>
+          <p>
+            <a href="#!">Finds Jobs</a>
+          </p>
+          <p>
+            <a href="#!">Post Jobs</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" id="contactlinjmp">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fa fa-Home mr-3"></i> Ktm, Thamel, NP</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i> artisthub20@gmail.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 9860100473</p>
+          <p>
+            <i class="fa fa-print mr-3"></i> + 9860690480</p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Footer links -->
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-center text-md-left">� 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/">
+              <strong> ArtistHub: Get Signed for event</strong>
+            </a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+  <!--Modal: modalPush-->
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content text-center">
+                     <div class="modal-header d-flex justify-content-center mdb-color darken-4">
+           <h4><i class="fa fa-krw fa-2x animated bounce infinite"> &nbsp; </i> <b><strong class="text-white">Registration Process </strong></b> </h4>
+
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+  
+            </div>
+              <!--Body-->
+            <div class="modal-body">
+
+                
+                <!-- <h4 class="animated bounceInUp bLack-text"> <b>Job Poster || Artist seeker </b> </h4> -->
+                <!-- Card -->
+<div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+
+    <!-- Content -->
+    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+        <div>
+                     <i class="fa fa-bell fa-4x animated swing infinite tranistion 60s mb-4"></i>
+     <h4 class="card-title pt-2 animated pulse infinite tranistion 50s"><strong> Are you Seeking for an Artist or a job ? </strong></h4>
+                       <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-clone left"></i> Choice is yours </a> <br>
+                        <a mdbBtn color="pink" class="waves-light" mdbWavesEffect><i class="fa fa-weibo left"></i><Small> Join us in this platform build up for your potentials. </Small></a>
+                     
+        </div>
+    </div>
+    <!-- Content -->
+</div>
+<!-- Card -->
+
+
+            </div>
+  
+            <!--Footer-->
+            <div class="modal-footer flex-center">
+                <a href="jobpostersignupp.html" class="btn btn-primary ">Seeker</a>
+                <a type="button" href="jobseekersignupp.html" class="btn btn-outline-primary waves-effect" >Artist</a>
+            <a href="redirectotadmin"></a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: modalPush-->
+
+  <!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Login</a>
+                    </li>
+             
+                </ul>
+                <script>
+                  function validateForm() {
+                    var x = document.forms["myForm"]["username"].value;
+                    if (x == "") {
+                      alert("Name must be filled out");
+                      return false;
+                    }
+                  }
+                  </script>
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+          <form name="myform"  role="form" onsubmit="return validateform()"  >
+                        <div class="modal-body mb-1">
+
+
+
+                         <!-- Default input -->
+<label for="exampleForm2">Username : </label>
+<input type="text" id="username" name="username"  class="form-control validate">
+                        </div>
+                              <div class="modal-body mb-1">
+                         <!-- Default input -->
+<label for="exampleForm2">Password : </label>
+<input type="password" id="pass" name="password"  class="form-control validate">
+                        </div>
+                     <div class="text-center">
+<button type="submit" class="btn btn-outline-primary btn-rounded waves-effect" id="login-btn">Login</button>
+</div>
+
+</form>
+                       
+                    <!--/.Panel 7-->
+
+                  
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+
+
+
+<div class="modal fade" id="modalforgetpassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Forget Password</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+           <div class="text-center">
+          <i class="fa fa-file-text-o fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            <strong>Please Enter your email address</strong>
+          </p>
+        
+        </div>
+<form action="getforgotpasswordall" method="POST">
+
+Are you Artist seeker or Job Poster ? <br>
+
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialGroupExample1" name="jobtype" value="jobposter">
+  <label class="form-check-label" for="materialGroupExample1">Job Poster</label>
+</div>
+
+<!-- Group of material radios - option 2 -->
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialGroupExample2" name="jobtype" value="jobseeker">
+  <label class="form-check-label" for="materialGroupExample2">Artist seeker</label>
+</div>
+
+
+
+
+
+
+
+
+
+
+ <div class="md-form mb-5">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                     <label data-error="wrong" data-success="right" for="defaultForm-email">Username</label> <br>
+                    <input type="text" id="defaultForm-email" class="form-control validate" required="required" name="username">
+                   
+                </div>
+     
+    <div class="md-form mb-5">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                     <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label> <br>
+                    <input type="email" id="defaultForm-email" class="form-control validate" required="required" name="email">
+                   
+                </div>
+
+                 <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-indigo">Post Message <i class="fa fa-paper-plane-o ml-1"></i></button>
+            </div>
+          </form>
+
+            </div>
+           
+                 </div>
+
+    </div>
+
+</div>
+
+<script>  
+  function validateform(){  
+  var username=document.myform.name.value;  
+  var password=document.myform.password.value;  
+    
+  if (username==null || username==""){  
+    alert("Name can't be blank");  
+    return false;  
+  }else if(pass.length<6){  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+    }  
+  }  
+  </script> 
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="js/scriptlog.js"></script>
+        
+
+
+</body>
+  
+    
+
+</body>
+</html>
