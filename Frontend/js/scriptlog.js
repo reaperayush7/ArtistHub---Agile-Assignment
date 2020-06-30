@@ -75,4 +75,54 @@ $(document).ready(function(){
          });
      });
     
+     $("#submit-post").on('click', function (e) {
+
+        e.preventDefault();
+     
+        console.log("hello");
+     
+         let user = {
+            description: $("#description").val(),
+             
+             
+         };
+         console.log(user);
+         $.ajax({
+             type: 'POST',
+             url: 'http://localhost:3000/post',
+             data: user,
+     
+             success: function (user) {
+                 alert("post uploaded");
+                 location.reload(); 
+             },
+             error: function () {
+                 alert("write clearly");
+             }
+         });
+     });
+        function rowTemplate(hero) {
+            let oneRow = '<div class="card-body">'+ ' <h6 class="card-title">Job name:&nbsp;'+hero.description + 
+            '</h6>' +'</div><hr>';
+           
+            return oneRow;
+        }
+    
+        $.ajax({
+            type: 'GET',
+            url: base_url + 'post',
+            success: function (heroes) {
+                let myRows = [];
+                $.each(heroes, function (index, hero) {
+                    myRows.push(rowTemplate(hero));
+                });
+                tblBody.append(myRows);
+            },
+            error: function () {
+               
+            }
+        });
+    
+    
+    });
     
