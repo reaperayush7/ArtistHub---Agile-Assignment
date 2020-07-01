@@ -40,7 +40,7 @@ $(document).ready(function(){
              }
          });
      });
-    $("#Register-seekerbtn").on('click', function (e) {
+     $("#Register-seekerbtn").on('click', function (e) {
 
         e.preventDefault();
      
@@ -74,6 +74,41 @@ $(document).ready(function(){
              }
          });
      });
+    
+    $("#Register-btn").on('click', function (e) {
+    
+       e.preventDefault();
+    
+       console.log("hello");
+     
+        let user = {
+            username: $("#user").val(),
+            password: $("#pass-repeat").val(),
+            FirstName: $("#firstname").val(),
+           
+            contactnumber: $("#contactno").val(),
+            email: $("#email").val(),
+            Country: $("#country").val(),
+            dob: $("#dob").val(),
+            Address: $("#Address").val(),
+            publisher: $('#publisher').val(),
+            image: imageFile
+        };
+        console.log(user);
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/users/signup',
+            data: user,
+    
+            success: function (user) {
+                alert("Registration Successful");
+                window.location.href = '/index.html';    
+            },
+            error: function () {
+                alert("regis");
+            }
+        });
+    });
     
      $("#submit-post").on('click', function (e) {
 
