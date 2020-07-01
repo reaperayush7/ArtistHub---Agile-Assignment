@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Seeker Signup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+   <!-- Custom styles for this template -->
+    <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+ <link rel="icon" href="../Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
+<!--   Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ <!-- yo chai text transformation ko  lagi  -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ <!-- dfsdffffffffffffffffffffffffffffff-------------------------------------- -->
+
+ 
+<style>
+  .steps-form-2 {
+    display: table;
+    width: 100%;
+    position: relative; }
+.steps-form-2 .steps-row-2 {
+    display: table-row; }
+.steps-form-2 .steps-row-2:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: #7283a7; }
+.steps-form-2 .steps-row-2 .steps-step-2 {
+    display: table-cell;
+    text-align: center;
+    position: relative; }
+.steps-form-2 .steps-row-2 .steps-step-2 p {
+    margin-top: 0.5rem; }
+.steps-form-2 .steps-row-2 .steps-step-2 button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #59698D;
+    background-color: white !important;
+    color: #59698D !important;
+    border-radius: 50%;
+    padding: 22px 18px 15px 18px;
+    margin-top: -22px; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2:hover {
+    border: 2px solid #4285F4;
+    color: #4285F4 !important;
+    background-color: white !important; }
+.steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 .fa {
+    font-size: 1.7rem; }
+</style>
+ <!-- this for image upload script -->
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-pic').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+    
+    $(".upload-button").on('click', function() {
+       $(".file-upload").click();
+    });
+});
+</script>
+
+	<script type="text/javascript">
+	
+	
+	/* function dblclick(username){
+		$username = document.getElementById("usernamee").value;
+		
+		window.location="${pageContext.request.contextPath}/"+$username+"/getcheckusername";
+	} */
+	
+	$(document).ready(function(){
+	    $("#chkavla").dblclick(function(){
+	       
+	    	$username = document.getElementById("usernamee").value;
+			
+			window.location="${pageContext.request.contextPath}/"+$username+"/getcheckusername";
+			
+	    });
+	});
+
+</script>
+
+
+
+
+ <!-- this for image upload css -->
+<style type="text/css">
+/*  body {
+  background-color: #efefef;
+}
+*/
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 8px solid rgba(215, 215, 255, 0.7);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 3px;
+  color: #665566;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #988;
+}
+</style>
+<script type="text/javascript">
+  // Tooltips Initialization
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Steppers
+$(document).ready(function () {
+  var navListItems = $('div.setup-panel-2 div a'),
+          allWells = $('.setup-content-2'),
+          allNextBtn = $('.nextBtn-2'),
+          allPrevBtn = $('.prevBtn-2');
+
+  allWells.hide();
+
+  navListItems.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-amber').addClass('btn-blue-grey');
+          $item.addClass('btn-amber');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
+  });
+
+  allPrevBtn.click(function(){
+      var curStep = $(this).closest(".setup-content-2"),
+          curStepBtn = curStep.attr("id"),
+          prevStepSteps = $('div.setup-panel-2 div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+          prevStepSteps.removeAttr('disabled').trigger('click');
+  });
+
+  allNextBtn.click(function(){
+      var curStep = $(this).closest(".setup-content-2"),
+          curStepBtn = curStep.attr("id"),
+          nextStepSteps = $('div.setup-panel-2 div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+
+      $(".form-group").removeClass("has-error");
+      for(var i=0; i< curInputs.length; i++){
+          if (!curInputs[i].validity.valid){
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+          }
+      }
+
+      if (isValid)
+          nextStepSteps.removeAttr('disabled').trigger('click');
+  });
+
+  $('div.setup-panel-2 div a.btn-amber').trigger('click');
+});
+</script>
+
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row">
+            
+           
+
+                
+                <div class="col-sm-7 offset-sm-2">
+<div>
+  <!-- pt-4 pb-5 mb-5 -->
+                  <h2 class="text-center font-bold pt-1 pb-0 mb-0"><strong>Sign Up as Artist seeker </strong> </h2>
+                
+</div>
+<!-- Stepper -->
+<div class="steps-form-2">
+    <div class="steps-row-2 setup-panel-2 d-flex justify-content-between">
+        <div class="steps-step-2">
+            <a href="#step-1" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="Basic Information"><i class="fa fa-folder-open-o" aria-hidden="true"></i></a>
+        </div>
+        
+        
+<!--         ---------------this for the organiztion wala  ko lagi------------
+ -->    
+  
+ 
+ 
+ 
+ 
+    </div>
+</div>
+
+<!-- First Step -->
+<div class="container">
+
+            </p>
+            <p class="divider-text"></p>
+            <form id="basic-form">
+                    <form enctype="multipart/form-data" id="fileUploadForm">
+                        
+                       
+                        <input class="fa fa-camera upload-button" type="file"  id="fileToUpload" />
+                      </form><br>
+                      <div class="form-group md-form">
+                            <label for="fname" data-error="wrong" data-success="right">Username <small>(required)</small></label> <br>
+                            <input id="user" name="firstname"type="text" required="required"  required>
+                        </div>
+                        <div class="form-group md-form">
+                            <label for="lname" data-error="wrong" data-success="right">Password <small>(required)</small></label> <br>
+                            <input id="pass-repeat"name="lastname" type="password" required="required" c required>
+                        
+                        
+                        </div>
+                        <div class="form-group md-form">
+                                <label for="fname" data-error="wrong" data-success="right">First Name  <small>(required)</small></label> <br>
+                                <input id="firstname" name="firstname"type="text" required="required" class="form-control validate" required>
+                            </div>
+                            <div class="form-group md-form">
+                                <label for="lname" data-error="wrong" data-success="right">LastName <small>(required)</small></label> <br>
+                                <input id="lastname"name="lastname" type="text" required="required" class="form-control validate" required>
+                                <div class="form-group md-form mt-3">
+                                        <label for="repeatPassword-2" data-error="wrong" data-success="right">Email <small>(required)</small></label> <br>
+                                        <input id="email" type="email" data-validation="email" data-validation="required"  required="required" name="email" class="form-control validate">
+                                    </div>
+                                    <div class="form-group md-form mt-3">
+                                            <label for="repeatPassword-2" data-error="wrong" data-success="right">Address <small>(required)</small></label> <br>
+                                            <input id="Address" type="email" required="required" name="email" class="form-control validate">
+                                        </div>
+                                    <div class="form-group md-form mt-3">
+                                            <label for="yourPassword-2" data-error="wrong" data-success="right">D.O.B <small>(required)</small></label> <br>
+                                            <input id="dob" type="date" required="required" name="dob" class="form-control validate" required>
+                                        </div>
+                                        <div class="form-group md-form mt-3">
+                                                <label for="repeatPassword-2" data-error="wrong" data-success="right">Contact No <small>(required)</small></label> <br>
+                                                <input id="contactno" type="number" required="required" name="contactno" class="form-control validate">
+                                            </div>
+                                <div class="form-group md-form">
+                                        <label for="yourName-2" data-error="wrong" data-success="right">Country</label> <br>
+                                        <input id="country" type="text" required="required" name="jobpostaddress.country" class="form-control validate">
+                                    </div>
+                                   
+                            </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block"id="Register-seekerbtn"> Create Account </button>
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a href="index.html">Log In</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// -->
+
+</div>
+                </div>
+  
+                <script src="js/scriptlog.js"></script>
+</body>
+</html>
