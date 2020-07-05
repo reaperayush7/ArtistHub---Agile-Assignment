@@ -109,6 +109,18 @@ $(document).ready(function(){
             }
         });
     });
+    function notempty(id){
+
+        var value = $("users"+id).val();
+    
+        var len = value.length;
+    
+        if (len < 1){
+            return false;
+        }else{
+            return true;
+        }
+    }
     
      $("#submit-post").on('click', function (e) {
 
