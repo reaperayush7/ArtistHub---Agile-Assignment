@@ -42,3 +42,41 @@ Post.create(req.body)
         }, (err) => next(err))
         .catch((err) => next(err));
 })
+router.route('/findmyonlydata')
+    .get((req, res, next) => {
+        console.log(req.user.id);
+        Post.find({userid:req.user.id})
+            .then((userpost) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(userpost);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
+
+router.route('/:id')
+    .get((req, res, next) => {
+
+        console.log(req.user.id);
+        Post.findById(req.params.id)
+            .then((userpost) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(userpost);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
+    .post((req, res, next) => {
+        res.statusCode = 403;
+        res.end("POST operation not supported!");
+    })
+    .put((req, res, next) => {
+        console.log(req.body.description);
+        Post.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true, useFindAndModify: false })
+            .then((userpost) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(userpost);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
