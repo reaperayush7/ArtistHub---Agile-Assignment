@@ -12,6 +12,58 @@ $(function () {
      withCredentials: true
   }
     });
+    
+
+    $.ajax({
+        type: 'GET',
+        url: base_url + 'user/findmyonlydata',
+    
+        success: function (user) {
+            console.log(user);
+            // $("#strongname").val(user.FirstName);
+            $( "#strongname" ).append(user.FirstName );
+            $( "#strongnames" ).append(user.LastName );
+            $( "#dob" ).append(user.dob );
+            $( "#number" ).append(user.contactnumber );
+            $( "#email" ).append(user.email );
+            $( "#address" ).append(user.Address );
+            $( "#image" ).append(user.image );
+            $( "#Uname" ).append(user.username );
+            $( "#country" ).append(user.Country );
+            $( "#descriptions" ).append(user.Description );
+           
+            $("#user_image").attr("src","http://localhost:3000/uploads/"+user.image);
+
+ 
+        },
+        error: function () {
+            alert('Something went wrong!');
+        }
+    });
+
+    $("#image-upload").on('change', function () {
+        let formData = new FormData();
+        let files = $("#image-upload").get(0).files;
+        if (files.length > 0) {
+            formData.append("imageFile", files[0]);
+        }
+        // $("#add-hero").prop("disabled", true);
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/uploads',
+            contentType: false,
+            cache: false,
+            processData: false,
+            data: formData,
+            success: function (data) {
+                imageFile = data.filename;
+                // $("#add-hero").prop("disabled", false);
+            },
+            error: function () {
+                alert("Image upload failed!");
+            }
+        });
+    });
     $("#uploadimage").on('click', function (e) {
 
         e.preventDefault();
