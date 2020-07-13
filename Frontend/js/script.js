@@ -16,6 +16,15 @@ $(function () {
      withCredentials: true
   }
     });
+    tblBody.on('click', '.delete', function () {
+        $.ajax({
+            type: 'DELETE',
+            url: base_url + 'eventposts/' + $(this).attr('hero_id'),
+            success: function () {
+                location.reload();
+            }
+        })
+    });
 tblBody.on('click', '#updateeventpost', function () {
 
     alert("hhhhhhhhhhhhhhhhhh"+$(this).attr('post_id'));
