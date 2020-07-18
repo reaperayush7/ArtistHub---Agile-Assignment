@@ -10,30 +10,7 @@ $(function () {
  }
     });
  
-    $("#file-To-Uploads").on('change', function () {
-        let formData = new FormData();
-        let files = $("#file-To-Uploads").get(0).files;
-        if (files.length > 0) {
-            formData.append("imageFile", files[0]);
-        }
-        // $("#add-hero").prop("disabled", true);
-        $.ajax({
-            type: 'POST',
-            url: base_url + 'uploads',
-            contentType: false,
-            cache: false,
-            processData: false,
-            data: formData,
-            success: function (data) {
-                imageFilees = data.filename;
-                // $("#add-hero").prop("disabled", false);
-            },
-            error: function () {
-                alert("Image upload failed!");
-            }
-        });
-    });
-
+   
     $("#applyjob").on('click', function (e) {
 
         e.preventDefault();
