@@ -42,7 +42,18 @@ Post.create(req.body)
         }, (err) => next(err))
         .catch((err) => next(err));
 })
-router.route('/findmyonlydata')
+.delete((req, res, next) => {
+    Post.deleteMany({})
+        .then((reply) => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            res.json(reply);
+        }, (err) => next(err))
+        .catch((err) => next(err));
+});
+
+
+    router.route('/findmyonlydata')
     .get((req, res, next) => {
         console.log(req.user.id);
         Post.find({userid:req.user.id})
@@ -80,3 +91,25 @@ router.route('/:id')
             }, (err) => next(err))
             .catch((err) => next(err));
     })
+    .delete((req, res, next) => {
+        Post.findById(req.params.id)
+            .then((userpost) => {
+
+                userpost.delete()
+                    .then((reply) => {
+                        res.statusCode = 200;
+                        res.setHeader('Content-Type', 'application/json');
+                        res.json(reply);
+                    })
+            }).catch((err) => next(err));
+
+            Post.findByIdAndDelete(req.params.id)
+            .then((reply) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(reply);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    });
+
+module.exports = router
