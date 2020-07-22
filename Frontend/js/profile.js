@@ -12,7 +12,7 @@ $(function () {
      withCredentials: true
   }
     });
-    
+
 
     $.ajax({
         type: 'GET',
@@ -64,6 +64,8 @@ $(function () {
             }
         });
     });
+
+
     $("#uploadimage").on('click', function (e) {
 
         e.preventDefault();
