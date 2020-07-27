@@ -2,7 +2,24 @@ const express = require('express');
 var EventPost = require('../Models/EventPost.js');
 var verify = require('../verify');
 
+const router = express.Router();
+router.route('/search')
+    .get((req, res, next) => {
+        // "gi" => g stands for global and i stands for ignore case
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+        EventPost.find({name:regex})
+            .then((Event) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(Event);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
 
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 //CRUD functions of models data here....
 router.route('/')
