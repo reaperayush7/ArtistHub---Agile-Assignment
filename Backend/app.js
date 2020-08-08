@@ -28,7 +28,14 @@ connect.then((db) => {
 //Giving routes path here
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var postRouter = require('./routes/post');
+var uploadRouter = require('./routes/uploads');
+var CvRouter = require('./routes/cv');
+var EventPostsRouter = require('./routes/EventPosts');
+var eventorganizerRouter = require('./routes/eventorganizer');
+var applyRouter = require('./routes/apply');
+var artistsRouter = require('./routes/artists');
+var userRouter = require('./routes/user');
 var app = express();
 
 app.use(bodyparser.urlencoded({
@@ -79,6 +86,13 @@ app.use('*', cors({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use(auth);
-
+app.use('/eventorganizer', eventorganizerRouter);
+app.use('/artists', artistsRouter);
+app.use('/uploads', uploadRouter);
+app.use('/cvupload', CvRouter);
+app.use('/post', postRouter);
+app.use('/EventPosts', EventPostsRouter);
+app.use('/user', userRouter);
+app.use('/apply', applyRouter);
 
 module.exports = app;
