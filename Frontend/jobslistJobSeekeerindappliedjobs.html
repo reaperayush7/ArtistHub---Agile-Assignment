@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+Artist</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+   <!-- Custom styles for this template -->
+    <!-- <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+ <link rel="icon" href="../Pics/ru1.jpg" type="image/jpg" sizes="32x32"> 
+<!--   Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+ <!-- yo chai text transformation ko  lagi  -->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ <!-- dfsdffffffffffffffffffffffffffffff-------------------------------------- -->  
+ <style>
+ .profi{
+  max-height:130px;
+  max-width:130px;
+ }
+.form-control{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+  margin-top: 10px;
+
+}
+.form-control[readonly].classname{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+.form-control[readonly].classnamepro{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+.form-control[readonly].classnameinadd{
+  background-color:transparent;
+  border: 0;
+  font-size: 1em;
+}
+
+.focus {
+    outline: 0;
+}
+.form-control.focus{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+.mrgo{
+  margin: 0px;
+}
+.hiddv{
+  display: none;
+}
+
+.hiddvindaddbtn{
+  display: none;
+}
+.hiddvindprf{
+   display: none; 
+}
+
+</style>
+<script>
+$(document).ready(function(){
+    $("#asas").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#btnclick").removeClass("hiddv");
+    });
+    $("#asas").mouseleave(function(){
+        $("#colorcd").css("background-color", "lightgray");
+         $("#btnclick").addClass("hiddv");
+    });
+
+      $("#profuse").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#profilbtnz").removeClass("hiddvindprf");
+    });
+    $("#profuse").mouseleave(function(){
+        // $("#colorcd").css("background-color", "lightgray");
+         $("#profilbtnz").addClass("hiddvindprf");
+    });
+
+});
+
+// this is for thee usernam 
+$(document).ready(function(){
+
+     $("#indhiddd").mouseenter(function(){
+        // $("#colorcd").css("background-color", "yellow");
+        $("#btnindiaddid").removeClass("hiddvindaddbtn");
+    });
+    $("#indhiddd").mouseleave(function(){
+        // $("#colorcd").css("background-color", "lightgray");
+         $("#btnindiaddid").addClass("hiddvindaddbtn");
+    });
+
+});
+
+
+
+// ----------------------
+
+
+$(document).ready(function(){
+    $("#btnindiaddid").click(function(){
+     $("#country").removeClass("classnameinadd");
+      $("#district").removeClass("classnameinadd");
+         $("#city").removeClass("classnameinadd") ;
+      // $(".classname").remove(); 
+    });
+});
+
+
+
+// ----------------------------for the profile------------------
+$(document).ready(function(){
+    $("#profilbtnz").click(function(){
+     // $(".colorcdpr").removeClass("classname"); 
+      $("#username").removeClass("classnamepro");
+        // $("readonly").remove();
+       $("#password").removeClass("classnamepro");
+      // $(".classname").remove(); 
+    });
+
+
+});
+</script>
+
+</head>
+<body class="#fafafa grey lighten-4">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-2" id="mainNav">
+    
+        <div class="container">
+  
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"><div style="height:60px;width:85px" class="ml-auto">
+            <img src="images/logo.png" style="height:40px;width:120px"><!-- <h3>RuAin </h3> --> </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <!-- this is for the search -->
+       <!--      <form class="form-inline">
+      <div class="input-group">
+  
+  
+        <input type="text" class="form-control glyphicon glyphicon-search " placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+      </div>
+    </form> -->
+      <form class="form-inline" action="gethejobpostlistjobosterbysearchvalue" method="POST">
+            
+           <!--  <button class="btn btn-outline-white btn-md my-2 my-sm-0" type="submit">Search</button> -->
+        </form>
+  
+    <!-- this is for the search -->
+            <ul class="navbar-nav ml-auto">
+  
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" href="post.html"><h6><Strong> Home </Strong></h6></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark js-scroll-trigger" href="jobslistpoindividual.html"><h6><Strong>Find events </Strong></h6></a>
+              </li>
+             <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobslistJobSeekeerindappliedjobs.html"><h6><Strong>Manage events </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="postedit.html"><h6><Strong>Manage posts </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="Post events.html"><h6><Strong>Post events </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="booking.html"><h6><Strong>Artist seeker </Strong></h6></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark js-scroll-trigger" href="jobposterProfile.html"><h6><Strong>Profile</Strong> </h6> </a>
+            </li>
+               
+               <!-- Dropdown -->
+              <li class="nav-item dropdown ml-3">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  
+  
+                   <!-- <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="18" alt=""> -->
+                     <img src="images/logo.png" style="height:30px;width:30px" class="rounded-circle img-fluid img-thumbnail">
+                   </a>
+                  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="jobposterProfile.html"><small>Profile </small></a>
+                      <a class="dropdown-item" href="jobposterProfile.html"><small>Account Setting </small></a>
+                      <a class="dropdown-item" id="logout"><small>Logout </small></a>
+                       
+                     
+                  </div>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+        </div>
+      </nav>
+
+<!-- ------------------this is for talako -->
+
+   <!--Panel-->
+
+    <!-- Editable table -->
+    
+<div class="card">
+  <h6 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h6>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">JobType</th>
+            <th class="text-center">Applicant</th>
+            <th class="text-center">Deadline</th>
+            <th class="text-center">Salary</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Remove</th>
+            <th class="text-center">Edit</th>
+          </tr>
+        </thead>
+        <tbody id="tblbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <!--Modal: Login / Register Form-->
+  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Update your jobpost</a>
+                    </li>
+             
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+          <form ></form><div class="md-form col-md-8">
+             
+              <label for="inputIconEx1"><small> &emsp; JobName (required) </small></label>  <br>
+             <!-- <i class="fa fa-street-view prefix" aria-hidden="true"></i>  -->
+              <input type="text" id="name" class="form-control" required="required" name="jobname" >
+              
+          </div>
+          <div class="md-form col-md-8">
+             
+               <label for="inputIconEx1"><small> &emsp; JobType (required) </small></label>  <br>
+               <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+               
+               <select id="JobType" class="mt-3">
+                <option value="Aviation:">Aviation</option>
+                <option value="Arts">Arts</option>
+                <option value="Law Enforcement">Law Enforcement</option>
+                <option value="Media">Media</option>
+                <option value="Aviation:">Aviation</option>
+                <option value="Arts">IT</option>
+                <option value="Medical:">Medical</option>
+                <option value="Service Industry">Service Industry</option>
+                <option value="Teaching">Teaching</option>
+                <option value="Technology:">Technology</option>
+              </select>
+               
+           </div>
+           <div class="md-form col-md-8">
+                
+                  <label for="inputIconEx1"><small> &emsp; Number of Applicant (required) </small></label>  <br>
+                  <!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+                  <input type="number" id="Applicant" class="form-control" required="required" name="numberofapplicant">
+                  
+              </div>
+              <div class="md-form col-md-10">
+
+                      
+                 <label for="inputIconEx1"><small class="text-monospace">&emsp; Salary </small></label>  <br>
+                 <input type="number" id="Salary" class="form-control" required="required" name="salary" >
+             
+                 
+             </div>
+             <div class="md-form col-md-10">
+                  <!-- <i class="" aria-hidden="true"></i> -->
+
+<label for="inputIconEx1"><small> &emsp; Deadline (required)</small></label>  <br>
+<!-- <i class="fa fa-street-view" aria-hidden="true"></i> -->
+<input type="date" id="Deadline" class="form-control" required="required" name="deadline">
+
+</div>
+
+             <div class="md-form">
+                
+                      <label for="textareaPrefix">Job Description <small> ( Min 120 words required)</small></label> <br>
+                  <textarea type="text" id="description" class="form-control md-textarea" rows="8" minlength="120" required="required" name="jobdescription"></textarea>
+              
+              </div>
+             
+              <button type="button"  id="update-job" class="btn btn-danger view" data-toggle="modal" data-target="#modalLRForm" post_id=' + hero._id + '>Submit</button>
+
+</form>
+                        <!--Footer-->
+                       
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                  
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Footer links -->
+      <div class="row text-center text-md-left mt-3 pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Artist: <small>Find Relevant job's </small></h6>
+          <p>Artist Hub is the new biggest job finding portal. We welcome every one 
+          with potentials to show off their talents and apply for jobs nation wide with adequate details and easy and effective selection.</p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">System Users</h6> 
+          <p>
+            <a href="#!">Job Poster</a>
+          </p>
+          <p>
+            <a href="#!">Artist seeker</a>
+          </p>
+          <p>
+            <a href="#!">Admin</a>
+          </p>
+          <p>
+            <a href="#!">Site Visiter</a>
+          </p>
+        
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Useful Attributes</h6>
+          <p>
+            <a href="#!">Scopes</a>
+          </p>
+          <p>
+            <a href="#!">Finds Jobs</a>
+          </p>
+          <p>
+            <a href="#!">Post Jobs</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" id="contactlinjmp">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fa fa-Home mr-3"></i> Ktm, Dillibazar, NP</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i> prajwalbogati@gmail.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 9841123123</p>
+          <p>
+            <i class="fa fa-print mr-3"></i> + 9841232132</p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Footer links -->
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-center text-md-left">� 2020 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/">
+              <strong> Artist: Find Relevant jobs</strong>
+            </a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+  <script src="js/script.js"></script>
+  <script src="js/logout.js"></script>
+</body>
+</html>

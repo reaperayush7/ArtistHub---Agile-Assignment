@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" name="searchKey" id="searchKey" />
+    <input type="submit" value="SUBMIT" class="button" />
+    <style>
+      body{
+        background-color: gray;
+
+      }
+      .button{
+        background-color:red;
+        color: lightgrey;
+        font-style:oblique;
+        font-size: larger;
+      }
+      </style>
+    
+
+    <div class="container">
+
+
+      <table class="table col-sm-12">
+        <thead>
+         
+        </thead>
+        <div class="card-body"><tbody id="tblbody"><hr></tbody></table></div>
+      </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let tblBody = $("#tblbody");
+
+        function rowTemplate(hero) {
+        let oneRow = '<div class="card-body">'+ ' <h6 class="card-title">Job name:&nbsp;'+hero.name + 
+        '</h6>' + '<p><small class="ml-1">job type:&nbsp; '+hero.JobType + '</p>'+
+        '<b>Preference Skills: </b>'+hero.Description+'<br><br><b>Total Applicant: </b>'+
+        hero.Applicant+'<p class="card-text mt-3"><b>Deadline: </b>'+hero.Deadline +
+        '<br><b>Salary: </b>'+hero.Salary+'</div>';
+
+       oneRow += '<td><p><a class="btn btn-danger btn-sm view" href='+ "findjobs.html"+ ' >Go To Event</a></td> <hr>';
+        
+      
+        return oneRow;
+    }
+
+        $.ajaxSetup({
+          xhrFields: {
+            withCredentials: true,
+          },
+        });
+        var trigger = $("#searchKey");
+        trigger.on("change", function (e) {
+          e.preventDefault();
+          var data = $("#searchKey").val();
+          $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/eventposts/search?search=" + data,
+            crossDomain: true,
+            contentType: "application/json",
+            success: function (response) {
+              let myRows = [];
+              $.each(response, function (index, hero) {
+            myRows.push(rowTemplate(hero));
+        });
+        tblBody.append(myRows);
+      },
+            error: function () {
+            alert('Something went wrong!');
+        
+            },
+          });
+        });
+      });
+    </script>
+<script src="js/apply.js"></script>
+
+  </body>
+</html>
