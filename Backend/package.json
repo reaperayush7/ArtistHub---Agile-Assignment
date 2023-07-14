@@ -301,7 +301,7 @@
     "saslprep": "^1.0.3",
     "sax": "^1.2.4",
     "scmp": "^2.0.0",
-    "semver": "^5.7.0",
+    "semver": "^5.7.2",
     "semver-diff": "^2.1.0",
     "send": "^0.16.2",
     "session-file-store": "^1.4.0",
